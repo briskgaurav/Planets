@@ -14,7 +14,7 @@ hdri.load("https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/moonlit_golf_1k.
 });
 
 // Background
-const bgtexture = new THREE.TextureLoader().load("./Public/stars.jpg");
+const bgtexture = new THREE.TextureLoader().load("./textures/stars.jpg");
 bgtexture.colorSpace = THREE.SRGBColorSpace;
 const bgeometry = new THREE.SphereGeometry(10, 100, 100);
 const bmaterial = new THREE.MeshStandardMaterial({ map: bgtexture, side: THREE.BackSide });
@@ -25,7 +25,7 @@ scene.add(bsphere);
 let radius = 1.3;
 let segments = 60;
 const spheres = new THREE.Group();
-const planets = ["./Public/csilla/color.png", "./Public/earth/map.jpg", "./Public/venus/map.jpg", "./Public/volcanic/color.png"];
+const planets = ["./textures/csilla/color.png", "./textures/earth/map.jpg", "./textures/venus/map.jpg", "./textures/volcanic/color.png"];
 
 for (let i = 0; i < 4; i++) {
   // textures
@@ -151,3 +151,4 @@ function handleTouchEnd() {
 window.addEventListener("touchstart", handleTouchStart);
 window.addEventListener("touchmove", handleTouchMove);
 window.addEventListener("touchend", handleTouchEnd);
+
